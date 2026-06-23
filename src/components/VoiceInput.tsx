@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addMessage } from '../store/chatSlice';
+import { addMessage, setLoading } from '../store/chatSlice';
 
 export const VoiceInput = () => {
   const [isListening, setIsListening] = useState(false);
@@ -47,8 +47,10 @@ export const VoiceInput = () => {
   return (
     <button
       onClick={toggleListening}
-      className={`w-full py-3 rounded-lg font-semibold text-white ${
-        isListening ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
+      className={`w-full py-3 rounded-lg font-semibold transition-all ${
+        isListening
+          ? 'bg-red-500 hover:bg-red-600 text-white shadow-md'
+          : 'bg-blue-500 hover:bg-blue-600 text-white shadow-md'
       }`}
     >
       {isListening ? '🎤 Stop Listening' : '🎤 Start Voice'}
