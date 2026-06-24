@@ -3,8 +3,15 @@ import { store } from './store';
 import { Avatar } from './components/Avatar';
 import { Chat } from './components/Chat';
 import { VoiceInput } from './components/VoiceInput';
+import { useEffect } from 'react';
+import { inspectAvatarModel } from './utils/inspectModel';
 
 function App() {
+  useEffect(() => {
+    // Temporarily inspect model on load
+    inspectAvatarModel().catch(console.error);
+  }, []);
+
   return (
     <Provider store={store}>
       <div className="min-h-screen bg-white">
