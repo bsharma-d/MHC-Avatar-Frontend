@@ -24,7 +24,7 @@ export const AvatarDisplay = ({
       listening: '👂 Listening',
       concerned: '❤️ Empathizing',
       happy: '😊 Happy',
-      neutral: '😊 Ready',
+      neutral: '😊 Idle',
     };
     return labels[g] || 'Ready';
   };
@@ -83,7 +83,6 @@ export const AvatarDisplay = ({
 
         {/* Gesture label */}
         <div className="text-center">
-          <p className="text-xs sm:text-sm font-medium text-white mb-1 drop-shadow-lg">Current Gesture</p>
           <p className="text-base sm:text-lg font-semibold text-white animate-fadeIn drop-shadow-lg">
             {getGestureLabel(displayGesture)}
           </p>
