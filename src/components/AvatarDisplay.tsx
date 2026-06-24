@@ -42,10 +42,14 @@ export const AvatarDisplay = ({
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 p-4 sm:p-6 rounded-lg sm:rounded-xl overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-32 sm:w-40 h-32 sm:h-40 bg-blue-100 rounded-full opacity-20 -mr-16 sm:-mr-20 -mt-16 sm:-mt-20"></div>
-      <div className="absolute bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-green-100 rounded-full opacity-20 -ml-12 sm:-ml-16 -mb-12 sm:-mb-16"></div>
+    <div 
+      className="relative w-full h-full flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg sm:rounded-xl overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: 'url(/Background.jpg)',
+      }}
+    >
+      {/* Dark overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full gap-4 sm:gap-6 w-full">
@@ -59,8 +63,8 @@ export const AvatarDisplay = ({
             }}
           ></div>
 
-          {/* Avatar Image - REAL AVATAR */}
-          <div className="relative w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden animate-fadeIn border-4 border-blue-100">
+          {/* Avatar Image */}
+          <div className="relative w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden animate-fadeIn border-4 border-white">
             <img
               src="/avatar.jpg"
               alt="Healthcare Assistant Avatar"
@@ -79,8 +83,8 @@ export const AvatarDisplay = ({
 
         {/* Gesture label */}
         <div className="text-center">
-          <p className="text-xs sm:text-sm font-medium text-gray-600 mb-1">Current Gesture</p>
-          <p className="text-base sm:text-lg font-semibold text-gray-900 animate-fadeIn">
+          <p className="text-xs sm:text-sm font-medium text-white mb-1 drop-shadow-lg">Current Gesture</p>
+          <p className="text-base sm:text-lg font-semibold text-white animate-fadeIn drop-shadow-lg">
             {getGestureLabel(displayGesture)}
           </p>
         </div>
