@@ -59,23 +59,14 @@ export const AvatarDisplay = ({
             }}
           ></div>
 
-          {/* Avatar circle - Professional placeholder */}
+          {/* Avatar Image - REAL AVATAR */}
           <div className="relative w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden animate-fadeIn border-4 border-blue-100">
-            {/* Head */}
-            <div className="absolute top-4 sm:top-6 w-8 sm:w-12 h-8 sm:h-12 bg-amber-200 rounded-full shadow-md"></div>
-
-            {/* Body */}
-            <div className="absolute top-12 sm:top-16 w-16 sm:w-20 h-12 sm:h-16 bg-gradient-to-b from-blue-300 to-blue-500 rounded-t-3xl"></div>
-
-            {/* Shoulders */}
-            <div className="absolute top-16 sm:top-20 w-20 sm:w-24 h-3 sm:h-4 bg-blue-400 rounded-full opacity-70"></div>
-
-            {/* Eyes */}
-            <div className="absolute top-8 sm:top-10 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gray-700 rounded-full left-6 sm:left-8"></div>
-            <div className="absolute top-8 sm:top-10 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gray-700 rounded-full right-6 sm:right-8"></div>
-
-            {/* Smile */}
-            <div className="absolute top-10 sm:top-12 w-3 sm:w-4 h-1.5 sm:h-2 border-b-2 border-gray-700 rounded-full left-1/2 transform -translate-x-1/2 opacity-70"></div>
+            <img
+              src="/avatar.png"
+              alt="Healthcare Assistant Avatar"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
           </div>
 
           {/* Status badge */}
