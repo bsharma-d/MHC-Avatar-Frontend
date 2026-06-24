@@ -126,7 +126,6 @@ export const VoiceInput = ({ onListeningChange }: VoiceInputProps) => {
     <div className="flex flex-col gap-2">
       <button
         onClick={toggleListening}
-        disabled={!recognitionRef.current}
         className={`w-full py-2 sm:py-3 rounded-lg font-semibold transition-all text-xs sm:text-base ${
           isListening
             ? 'bg-red-500 hover:bg-red-600 text-white shadow-md'
