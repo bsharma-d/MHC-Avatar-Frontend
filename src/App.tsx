@@ -18,9 +18,11 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             {/* Logo and branding */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-lg">🏥</span>
-              </div>
+              <img 
+                src="/mhc-logo.png" 
+                alt="MHC Logo" 
+                className="h-10 w-auto"
+              />
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold text-gray-900">MHC Avatar</h1>
                 <p className="text-xs sm:text-sm text-gray-500">Mental Health Commission</p>

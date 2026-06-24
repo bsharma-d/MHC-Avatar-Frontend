@@ -62,7 +62,7 @@ export const AvatarDisplay = ({
           {/* Avatar Image - REAL AVATAR */}
           <div className="relative w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-white shadow-2xl flex items-center justify-center overflow-hidden animate-fadeIn border-4 border-blue-100">
             <img
-              src="/avatar.png"
+              src="/avatar.jpg"
               alt="Healthcare Assistant Avatar"
               className="w-full h-full object-cover"
               loading="eager"
